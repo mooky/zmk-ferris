@@ -10,14 +10,12 @@
 #define U_MOUSE_MOVE_EXPONENT 2
 #define U_MOUSE_MOVE_TIME 650
 #define U_MOUSE_MOVE_DELAY 0
-
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 #define U_MOUSE_SCROLL_EXPONENT 1
 #define U_MOUSE_SCROLL_TIME 5000
 #define U_MOUSE_SCROLL_DELAY 0
 
 / {
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -26,7 +24,6 @@
             then-layer = <3>;
         };
     };
-
 
     combos {
         compatible = "zmk,combos";
@@ -50,10 +47,15 @@
             bindings = <&tog 4>;
             key-positions = <16 18>;
         };
-        
+
         combo_m_nav_toggle {
             bindings = <&tog 5>;
             key-positions = <16 17 18>;
+        };
+
+        combo_m_scroll {
+            bindings = <&tog 6>;
+            key-positions = <26 27 28>;
         };
     };
 
@@ -89,6 +91,8 @@
             label = "TD_J_ESC";
             #binding-cells = <0>;
             bindings = <&hmr RIGHT_SHIFT J>, <&kp ESC>;
+
+            tapping-term-ms = <75>;
         };
     };
 
@@ -146,6 +150,15 @@
 &trans  &trans  &trans  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
 &trans  &trans  &trans  &trans  &trans    &trans     &trans          &mmv MOVE_DOWN  &trans           &trans
                         &trans  &trans    &mkp LCLK  &mkp RCLK
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_DOWN  &trans           &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
