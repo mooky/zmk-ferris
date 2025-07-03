@@ -63,7 +63,7 @@
         combo_space {
             timeout-ms = <50>;
             key-positions = <27 28>;
-            bindings = <&kp SPACE>;
+            bindings = <&kp ENTER>;
         };
     };
 
