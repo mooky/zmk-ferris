@@ -138,7 +138,7 @@
 &trans  &trans  &trans  &trans  &trans    &trans    &kp LC(LS(TAB))  &trans          &kp LC(TAB)      &trans
 &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT_ARROW   &kp UP_ARROW    &kp RIGHT_ARROW  &kp INS
 &trans  &trans  &trans  &trans  &trans    &kp END   &kp PAGE_DOWN    &kp DOWN_ARROW  &kp PAGE_UP      &kp DEL
-                        &trans  &trans    &trans    &trans
+                        &to 0   &trans    &trans    &trans
             >;
         };
 
@@ -147,7 +147,7 @@
 &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans          &trans           &trans
 &trans  &trans  &trans  &trans  &trans    &none      &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none
 &trans  &trans  &trans  &trans  &trans    &none      &none           &mmv MOVE_DOWN  &none            &none
-                        &trans  &trans    &mkp LCLK  &mkp RCLK
+                        &to 0   &trans    &mkp LCLK  &mkp RCLK
             >;
         };
 
@@ -156,7 +156,7 @@
 &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &none           &msc SCRL_DOWN  &none            &trans
-                        &trans  &trans    &trans  &trans
+                        &to 0   &trans    &trans  &trans
             >;
         };
     };
