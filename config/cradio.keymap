@@ -121,6 +121,13 @@
             hold-trigger-key-positions = < 10 11 12 13 >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
+
+        td_j_esc: td_j_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_J_ESC";
+            #binding-cells = <0>;
+            bindings = <&hmr RIGHT_SHIFT J>, <&kp ESC>;
+        };
     };
 
     keymap {
@@ -128,10 +135,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W        &kp E         &kp R          &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P
+&kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P
 &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
-&kp Z            &kp X        &kp C         &kp V          &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH
-                                            &lt 2 TAB      &kp ENTER    &kp SPACE  &lt 1 BSPC
+&kp Z        &kp X        &kp C         &kp V         &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH
+                                        &lt 2 TAB     &kp ENTER    &kp SPACE  &lt 1 BSPC
             >;
         };
 
