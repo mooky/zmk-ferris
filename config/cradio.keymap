@@ -10,6 +10,7 @@
 #define U_MOUSE_MOVE_EXPONENT 2
 #define U_MOUSE_MOVE_TIME 500
 #define U_MOUSE_MOVE_DELAY 0
+
 //#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 //#define U_MOUSE_SCROLL_EXPONENT 1
 //#define U_MOUSE_SCROLL_TIME 5000
@@ -57,6 +58,11 @@
             bindings = <&tog 6>;
             key-positions = <26 27 28>;
         };
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+        };
     };
 
     behaviors {
@@ -92,9 +98,9 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y      &kp U       &kp I         &kp O        &kp P
-&hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H      &hrm RSHFT J   &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
-&kp Z        &kp X        &kp C         &kp V         &kp B        &kp N      &kp M       &kp COMMA     &kp DOT      &kp FSLH
+&kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P
+&hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H      &hrm RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
+&kp Z        &kp X        &kp C         &kp V         &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH
                                         &lt 2 TAB     &kp ENTER    &kp SPACE  &lt 1 BSPC
             >;
         };
