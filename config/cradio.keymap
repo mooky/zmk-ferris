@@ -95,6 +95,15 @@
         };
     };
 
+    behaviors {
+        td_esc: td_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp J>, <&kp ESC>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
