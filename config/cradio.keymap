@@ -155,6 +155,16 @@
             bindings = <&num_word 1>;
             key-positions = <12 11 13>;
         };
+
+        combo_lparen {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <12 16 26>;
+        };
+
+        combo_rparen {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <12 17 27>;
+        };
     };
 
     behaviors {
@@ -199,7 +209,7 @@
 
         right_layer {
             bindings = <
-&kp X    &kp N7  &kp N8  &kp NUMBER_9  &trans     &trans  &kp F7  &kp F8  &kp F9  &kp F10
+&none    &kp N7  &kp N8  &kp NUMBER_9  &trans     &trans  &kp F7  &kp F8  &kp F9  &kp F10
 &kp N0   &kp N4  &kp N5  &kp N6        &trans     &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &kp DOT  &kp N1  &kp N2  &kp N3        &trans     &trans  &kp F1  &kp F2  &kp F3  &kp F12
                          &trans        &kp ESC    &trans  &trans
