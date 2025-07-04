@@ -169,6 +169,11 @@
             layers = <0>;
             timeout-ms = <300>;
         };
+
+        combo_grave_tilde {
+            bindings = <&kp GRAVE>;
+            key-positions = <9 19>;
+        };
     };
 
     behaviors {
