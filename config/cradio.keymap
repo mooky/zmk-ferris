@@ -156,12 +156,12 @@
             key-positions = <12 11 13>;
         };
 
-        combo_lparen {
+        combo_lparen_ex {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <12 16 26>;
         };
 
-        combo_rparen {
+        combo_rparen_ex {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <12 17 27>;
         };
