@@ -89,6 +89,66 @@
             bindings = <&kp PERCENT>;
             key-positions = <4 14>;
         };
+
+        combo_caret {
+            bindings = <&kp CARET>;
+            key-positions = <10 20>;
+        };
+
+        combo_amps {
+            bindings = <&kp AMPS>;
+            key-positions = <11 21>;
+        };
+
+        combo_astrk {
+            bindings = <&kp ASTRK>;
+            key-positions = <12 22>;
+        };
+
+        combo_lparen {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <13 23>;
+        };
+
+        combo_rparen {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <14 24>;
+        };
+
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <6 16>;
+        };
+
+        combo_equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <7 17>;
+        };
+
+        combo_quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <8 18>;
+        };
+
+        combo_lbracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <16 26>;
+        };
+
+        combo_rbracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <17 27>;
+        };
+
+        combo_bslh {
+            bindings = <&kp BSLH>;
+            key-positions = <18>;
+        };
+
+        combo_smart_word {
+            bindings = <&caps_word>;
+            key-positions = <11 13>;
+        };
     };
 
     behaviors {
