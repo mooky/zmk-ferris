@@ -152,7 +152,7 @@
         };
 
         combo_numword {
-            bindings = <&caps_word>;
+            bindings = <&num_word 1>;
             key-positions = <21 23 22>;
         };
     };
