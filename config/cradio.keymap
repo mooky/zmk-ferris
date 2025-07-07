@@ -257,10 +257,11 @@
         };
 
         combo_numword {
-            bindings = <&caps_word>;
+            bindings = <&num_word 1>;
             key-positions = <3 13>;
             layers = <0>;
         };
+
 
         combo_capsword {
             bindings = <&caps_word>;
@@ -330,7 +331,7 @@
 
         num {
             bindings = <
-&none         &kp PLUS   &kp N5  &kp NUMBER_6  &none     &none   &kp N7  &kp N8  &kp N9  &none
+&none         &kp PLUS   &kp N5  &kp N6  &none     &none   &kp N7  &kp N8  &kp N9  &none
 &kp ASTERISK  &kp MINUS  &kp N0  &kp N1        &none     &none   &kp N2  &kp N3  &kp N4  &kp EQUAL
 &none         &none      &none   &none         &none     &none   &none   &none   &none   &none
                                  &trans        &trans    &trans  &trans
