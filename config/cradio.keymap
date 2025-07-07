@@ -210,7 +210,6 @@
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <2 1 2>;
-            layers = <0>;
         };
 
         combo_grave {
