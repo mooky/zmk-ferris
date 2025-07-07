@@ -207,11 +207,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            bindings = <&kp ESC>;
-            key-positions = <2 1 2>;
-        };
-
         combo_grave {
             bindings = <&kp GRAVE>;
             key-positions = <0 10>;
@@ -294,6 +289,11 @@
             bindings = <&kp SQT>;
             key-positions = <9 19>;
             layers = <0>;
+        };
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
         };
     };
 
