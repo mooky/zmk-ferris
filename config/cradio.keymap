@@ -16,7 +16,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     conditional_layers {
@@ -28,7 +27,7 @@
         };
     };
 
-/*    combos {
+    /*    combos {
         compatible = "zmk,combos";
 
         combo_bkspc {
@@ -203,6 +202,107 @@
             hold-trigger-key-positions = < 20 21 22 23 >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
+
+        td_e_esc: td_e_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_E_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp ESC>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <2 1 2>;
+            layers = <0>;
+        };
+
+        combo_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 10>;
+            layers = <0>;
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 20>;
+            layers = <0>;
+        };
+
+        combo_ins {
+            bindings = <&kp INS>;
+            key-positions = <1 11>;
+            layers = <0>;
+        };
+
+        combo_del {
+            bindings = <&kp DEL>;
+            key-positions = <11 21>;
+            layers = <0>;
+        };
+
+        combo_pgup {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <2 12>;
+            layers = <0>;
+        };
+
+        combo_pgdn {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <12 22>;
+            layers = <0>;
+        };
+
+        combo_numword {
+            bindings = <&caps_word>;
+            key-positions = <3 13>;
+            layers = <0>;
+        };
+
+        combo_capsword {
+            bindings = <&caps_word>;
+            key-positions = <13 23>;
+            layers = <0>;
+        };
+
+        combo_left {
+            bindings = <&kp LEFT>;
+            key-positions = <26 16>;
+            layers = <0>;
+        };
+
+        combo_up {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <7 17>;
+            layers = <0>;
+        };
+
+        combo_down {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <17 27>;
+            layers = <0>;
+        };
+
+        combo_right {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <18 28>;
+            layers = <0>;
+        };
+
+        combo_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <19 29>;
+            layers = <0>;
+        };
+
+        combo_single {
+            bindings = <&kp SQT>;
+            key-positions = <9 19>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -210,29 +310,33 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P
-&kp A  &kp S  &kp D  &kp F  &kp G        &kp H      &kp J  &kp K  &kp L  &kp SEMI
-&hml LGUI Z        &hml LALT X        &hml LCTRL C         &hml LSHFT V         &kp B        &kp N      &hmr RSHFT M         &hmr RCTRL COMMA     &hmr RALT DOT      &hmr RGUI FSLH
-                                        &lt 4 TAB     &kp ENTER    &kp SPACE  &lt 1 BSPC
+&kp Q        &kp W        &td_e_esc     &kp R         &kp T              &kp Y            &kp U         &kp I             &kp O          &kp P
+&lt 2 A      &lt 5 S      &lt 4 D       &lt 1 F       &kp G              &kp H            &lt 1 J       &lt 4 K           &lt 5 L        &lt 2 SEMI
+&hml LGUI Z  &hml LALT X  &hml LCTRL C  &hml LSHFT V  &kp B              &kp N            &hmr RSHFT M  &hmr RCTRL COMMA  &hmr RALT DOT  &hmr RGUI FSLH
+                                        &lt 3 TAB     &mt SPACE LSHFT    &mt ENTER LCTRL  &lt 1 BSPC
             >;
         };
 
-        right_layer {
+        ext {
             bindings = <
-&none    &kp N7  &kp N8  &kp NUMBER_9  &trans     &trans  &kp F7  &kp F8  &kp F9  &kp F10
-&kp N0   &kp N4  &kp N5  &kp N6        &trans     &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&kp DOT  &kp N1  &kp N2  &kp N3        &trans     &trans  &kp F1  &kp F2  &kp F3  &kp F12
-                         &trans        &kp ESC    &trans  &trans
+&kp GRAVE  &kp INS  &kp PAGE_UP    &caps_word  &bootloader    &bootloader  &none     &kp UP    &none      &kp INS
+&kp TAB    &kp DEL  &kp PAGE_DOWN  &caps_word  &none          &none        &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
+&none      &none    &none          &none       &none          &none        &kp HOME  &kp X     &kp END    &kp DEL
+                                   &trans      &trans         &trans       &trans
             >;
+
+            label = "ext";
         };
 
-        left_layer {
+        num {
             bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
-                              &trans    &trans       &trans     &trans
+&none         &kp PLUS   &kp N5  &kp NUMBER_6  &none     &none   &kp N7  &kp N8  &kp N9  &none
+&kp ASTERISK  &kp MINUS  &kp N0  &kp N1        &none     &none   &kp N2  &kp N3  &kp N4  &kp EQUAL
+&none         &none      &none   &none         &none     &none   &none   &none   &none   &none
+                                 &trans        &trans    &trans  &trans
             >;
+
+            label = "number";
         };
 
         tri_layer {
@@ -244,30 +348,21 @@
             >;
         };
 
-        kb_nav_layer {
+        sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans    &kp LC(LS(TAB))  &trans          &kp LC(TAB)      &trans
-&trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT_ARROW   &kp UP_ARROW    &kp RIGHT_ARROW  &kp INS
-&trans  &trans  &trans  &trans  &trans    &kp END   &kp PAGE_DOWN    &kp DOWN_ARROW  &kp PAGE_UP      &kp DEL
-                        &to 0   &trans    &trans    &trans
+&none      &kp PRCNT  &kp PIPE  &kp BSLH  &none       &none   &kp RPAR  &kp RBRC  &kp RBKT  &none
+&kp CARET  &kp HASH   &kp EXCL  &kp FSLH  &kp DLLR    &none   &kp LPAR  &kp LBRC  &kp LBKT  &kp SQT
+&none      &none      &none     &none     &none       &none   &none     &none     &none     &none
+                                &trans    &trans      &trans  &trans
             >;
         };
 
-        m_nav_layer {
+        fun {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans          &trans           &trans
-&trans  &trans  &trans  &trans  &trans    &none      &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none
-&trans  &trans  &trans  &trans  &trans    &none      &none           &mmv MOVE_DOWN  &none            &none
-                        &to 0   &trans    &mkp LCLK  &mkp RCLK
-            >;
-        };
-
-        m_scroll_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &none           &msc SCRL_DOWN  &none            &trans
-                        &to 0   &trans    &trans  &trans
+&none  &kp F7  &kp F8  &kp F9  &none     &none   &kp F10  &kp F11  &kp F12  &none
+&none  &kp F1  &kp F2  &kp F3  &none     &none   &kp F4   &kp F5   &kp F6   &none
+&none  &none   &none   &none   &none     &none   &none    &none    &none    &none
+                       &trans  &trans    &trans  &trans
             >;
         };
     };
