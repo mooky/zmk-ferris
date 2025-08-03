@@ -367,10 +367,10 @@
 
         sym {
             bindings = <
-&kp ASTERISK  &kp PRCNT  &kp PIPE  &kp BSLH  &kp DOLLAR       &kp UNDERSCORE  &kp RPAR  &kp RBRC  &kp RBKT  &none
-&kp CARET     &kp HASH   &kp EXCL  &kp FSLH  &kp AMPERSAND    &kp MINUS       &kp LPAR  &kp LBRC  &kp LBKT  &kp SQT
-&none         &none      &none     &none     &none            &none           &none     &none     &none     &none
-                                   &trans    &trans           &trans          &trans
+&kp ASTERISK  &kp PRCNT  &kp PIPE  &kp BSLH  &kp DOLLAR       &kp MINUS  &kp RPAR  &kp RBRC  &kp RBKT  &kp DOUBLE_QUOTES
+&kp CARET     &kp HASH   &kp EXCL  &kp FSLH  &kp AMPERSAND    &kp UNDER  &kp LPAR  &kp LBRC  &kp LBKT  &kp SQT
+&none         &none      &none     &none     &none            &none      &none     &none     &none     &none
+                                   &trans    &trans           &trans     &trans
             >;
         };
 
