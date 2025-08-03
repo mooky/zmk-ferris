@@ -318,7 +318,7 @@
 
         combo_space_l {
             bindings = <&kp SPACE>;
-            key-positions = <12 13>;
+            key-positions = <12 11>;
         };
     };
 
