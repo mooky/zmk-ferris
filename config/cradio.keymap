@@ -279,14 +279,14 @@
             layers = <0>;
         };
 
-        combo_enter {
-            bindings = <&kp ENTER>;
+        combo_single_quote {
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <19 29>;
             layers = <0>;
         };
 
-        combo_single {
-            bindings = <&kp SQT>;
+        combo_double_quote {
+            bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <9 19>;
             layers = <0>;
         };
@@ -324,6 +324,11 @@
         combo_underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <26 27 28>;
+        };
+
+        combo-hypen {
+            bindings = <&kp MINUS>;
+            key-positions = <26 27>;
         };
     };
 
